@@ -4,8 +4,6 @@ services:
     build:
       context: .
     container_name: jenkins
-    user: root
-    privileged: true
     environment:
       - "TZ=Asia/Seoul"
     ports:
