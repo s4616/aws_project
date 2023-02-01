@@ -1,13 +1,11 @@
 version: '3.9'
 services:
   jenkins:
-    build:
-      context: .
+    image: jenkins/jenkins:latest
     container_name: jenkins
     environment:
       - "TZ=Asia/Seoul"
     ports:
       - "8080:8080"
     volumes:
-      - ./jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
+      - "./data:/var/jenkins_home"
