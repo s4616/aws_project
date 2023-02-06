@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ## INFO: https://docs.docker.com/compose/install/
 
-set -euf -o pipefail
+set -euf pipefail
 DOCKER_COMPOSE_VERSION=v2.1.1
 
 # Download and install
