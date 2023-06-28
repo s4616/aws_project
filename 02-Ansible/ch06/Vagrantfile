@@ -102,7 +102,6 @@ end
     cfg.vm.host_name = "ansible-server"  
     cfg.vm.network "private_network", ip: "192.168.56.10" 
     cfg.vm.network "forwarded_port", guest:22, host: 60010, auto_correct: true, id: "ssh"
-    # host와 사용하게 될 공유폴더 지정
     cfg.vm.synced_folder "../data", "/vagrant", disabled: true
     cfg.vm.provision "shell", inline: "yum install epel-release -y"
     cfg.vm.provision "shell", inline: "yum install ansible -y"
